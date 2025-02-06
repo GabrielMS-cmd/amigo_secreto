@@ -6,7 +6,7 @@ function adicionarAmigos(){
      let amigos = document.getElementById("amigo").value
 
 
-    if (amigos === "") {
+    if (amigos === " ") {
         console.log("está vazio")
 
     } else if (listaDeAmigos.includes(amigos)) {
