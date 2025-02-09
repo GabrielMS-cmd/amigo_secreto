@@ -6,7 +6,7 @@ function adicionarAmigos(){
      let amigos = document.getElementById("amigo").value
 
 
-    if (amigos === " ") {
+    if (amigos == "") {
         console.log("está vazio")
 
     } else if (listaDeAmigos.includes(amigos)) {
@@ -42,3 +42,23 @@ function exibirAmigos(){
     
 }
 
+function sortearAmigos() {  
+    
+    if (listaDeAmigos.length === 0) { 
+        alert("Não há amigos para serem sorteados")
+
+    }
+ 
+    let indiceSorteado = Math.floor(Math.random() * listaDeAmigos.length)
+    let nomeSorteado = (listaDeAmigos[indiceSorteado])
+
+    exibirResultado(nomeSorteado)
+}
+
+
+function exibirResultado(nomeSorteado) {
+    let sorteio = document.getElementById("sorteio")
+    sorteio.innerHTML = nomeSorteado
+    
+
+}
