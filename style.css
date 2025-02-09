@@ -160,3 +160,73 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+@media screen and (max-width: 768px) {
+    .main-title {
+        font-size: 32px; /* Reduz o tamanho do título */
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .input-section {
+        border-radius: 32px 32px 0 0; /* Bordas menores para evitar excesso de espaço */
+        padding: 15px;
+    }
+
+    .input-name {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .button-draw {
+        flex-direction: column; /* Empilha ícone e texto */
+        padding: 15px;
+    }
+
+    .button-draw img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .input-wrapper {
+        flex-direction: column; /* Faz o input e botão ficarem um abaixo do outro */
+        width: 90%;
+    }
+
+    .input-name {
+        border-radius: 25px; /* Ajusta para não precisar de bordas separadas */
+        margin-bottom: 10px;
+    }
+
+    .button-add {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .button-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .button-draw {
+        width: 90%;
+        padding: 12px;
+    }
+}
