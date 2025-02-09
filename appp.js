@@ -3,14 +3,14 @@ let lista = document.getElementById("listaAmigos")
 
 // adiona os amigos na array
 function adicionarAmigos(){
-     let amigos = document.getElementById("amigo").value
+    
+    let amigos = document.getElementById("amigo").value
 
-
-    if (amigos == "") {
-        console.log("está vazio")
+    if (amigos === "") {
+        exibirTextoNaTela("h2", "O campo está vazio")
 
     } else if (listaDeAmigos.includes(amigos)) {
-        console.log("O nome já consta na lista")
+        exibirTextoNaTela("h2", "O nome já consta na lista")
     
     } else {
         listaDeAmigos.push(amigos)
@@ -24,6 +24,11 @@ function adicionarAmigos(){
     
 }
 
+function exibirConflitos(tag,texto){ 
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+    
+}
 // limpa a entrada a cada nome
 function limparCampo(){
     amigos = document.getElementById("amigo").value = ""
@@ -32,12 +37,15 @@ function limparCampo(){
 
 
 function exibirAmigos(){
+    
     let lista = document.getElementById("listaAmigos")
     lista.innerHTML = ""
     listaDeAmigos.forEach(amigo => { // lembrar de trocar para for depois
         let nome = document.createElement("li");
         nome.textContent = amigo;
         lista.appendChild(nome);
+        
+
     });
     
 }
@@ -45,8 +53,8 @@ function exibirAmigos(){
 function sortearAmigos() {  
     
     if (listaDeAmigos.length === 0) { 
-        alert("Não há amigos para serem sorteados")
-
+        exibirTextoNaTela("h2", "Não há amigos para serem sorteados")
+       
     }
  
     let indiceSorteado = Math.floor(Math.random() * listaDeAmigos.length)
