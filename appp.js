@@ -7,10 +7,10 @@ function adicionarAmigos(){
     let amigos = document.getElementById("amigo").value
 
     if (amigos === "") {
-        exibirTextoNaTela("h2", "O campo está vazio")
+        exibirConflitos("h2", "O campo está vazio")
 
     } else if (listaDeAmigos.includes(amigos)) {
-        exibirTextoNaTela("h2", "O nome já consta na lista")
+        exibirConflitos("h2", "O nome já consta na lista")
     
     } else {
         listaDeAmigos.push(amigos)
@@ -53,7 +53,7 @@ function exibirAmigos(){
 function sortearAmigos() {  
     
     if (listaDeAmigos.length === 0) { 
-        exibirTextoNaTela("h2", "Não há amigos para serem sorteados")
+        exibirConflitos("h2", "Não há amigos para serem sorteados")
        
     }
  
