@@ -206,12 +206,12 @@ ul {
     }
 
     .input-wrapper {
-        flex-direction: column; /* Faz o input e botão ficarem um abaixo do outro */
+        flex-direction: column;
         width: 90%;
     }
 
     .input-name {
-        border-radius: 25px; /* Ajusta para não precisar de bordas separadas */
+        border-radius: 25px;
         margin-bottom: 10px;
     }
 
@@ -222,11 +222,24 @@ ul {
 
     .button-container {
         width: 100%;
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     .button-draw {
-        width: 90%;
+        width: 100%;
+        max-width: 300px;
         padding: 12px;
-    }
+        margin: 0 auto;
+        .button-draw {
+            /* ... outros estilos ... */
+            justify-content: center; /* Centraliza conteúdo do botão */
+            text-align: center; /* Fallback para texto */
+        }
+        
+        .button-draw img {
+            margin: 0 0 8px 0; /* Espaço abaixo do ícone */
+        }
+}
+
 }
