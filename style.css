@@ -228,5 +228,11 @@ ul {
     .button-draw {
         width: 90%;
         padding: 12px;
+
+    }
+
+    .header-banner img {
+        max-width: 80%;
+        height: auto;
     }
 }
