@@ -3,7 +3,7 @@
     --color-secondary: #049989;
     --color-tertiary: #d10404;
     --color-button: #d10404;
-    --color-button-hover: #e55720;
+    --color-button-hover: #049989;
     --color-text: #d10404;
     --color-white: #FFFFFF;
 }
@@ -122,7 +122,7 @@ button {
 }
 
 .button-add:hover {
-    background-color: #a1a1a1;
+    background-color: #049989;
 }
 
 /* Listas */

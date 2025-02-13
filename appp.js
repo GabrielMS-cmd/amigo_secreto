@@ -24,11 +24,7 @@ function adicionarAmigos(){
     
 }
 
-function exibirConflitos(tag,texto){ 
-    let campo = document.querySelector(tag);
-    campo.innerHTML = texto;
-    
-}
+
 // limpa a entrada a cada nome
 function limparCampo(){
     amigos = document.getElementById("amigo").value = ""
@@ -61,6 +57,7 @@ function sortearAmigos() {
     let nomeSorteado = (listaDeAmigos[indiceSorteado])
 
     exibirResultado(nomeSorteado)
+    listaDeAmigos.splice(indiceSorteado)
 }
 
 
@@ -70,3 +67,21 @@ function exibirResultado(nomeSorteado) {
     
 
 }
+
+
+
+function exibirConflitos(tag,texto){ 
+    let campo = document.querySelector(tag);
+    campo.innerHTML = texto;
+    
+}
+
+//botão enter 
+document.addEventListener("keypress", function(e) {
+    if(e.key === "Enter") {
+    
+        var btn = document.querySelector("#enter");
+      
+      btn.click();
+    }
+});
