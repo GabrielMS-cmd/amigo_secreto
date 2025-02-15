@@ -47,6 +47,7 @@ function exibirAmigos(){
 
 
 function sortearAmigos() {
+    
     if (listaDeAmigos.length === 0) {
         exibirConflitos("h2", "Não há amigos para serem sorteados");
         return; // Sai da função se não houver amigos
@@ -61,22 +62,21 @@ function sortearAmigos() {
             return;
         }
 
-        
+        // Sorteia um índice aleatório
         let indiceSorteado = Math.floor(Math.random() * listaDeAmigos.length);
         let nomeSorteado = listaDeAmigos[indiceSorteado];
 
         
         exibirResultado(nomeSorteado);
+        listaDeAmigos.splice(indiceSorteado, 1); // remove da lista o nome já sorteado
 
-        // Remove o amigo sorteado da lista
-        listaDeAmigos.splice(indiceSorteado, 1);
 
-        
         exibirAmigos();
-
         
     }
 
+    
+    sortearProximo();
 }
 
 
@@ -87,11 +87,12 @@ function exibirResultado(nomeSorteado) {
         exibirConflitos("h2", "Digite o nome dos seus amigos");
         sorteio.innerHTML = "";
     
-    } else 
-
+    } else {
         sorteio.innerHTML = `O amigo secreto sorteado é: ${nomeSorteado}`;
+    }
         
 }
+      
     
 
 function exibirConflitos(tag,texto){ 
