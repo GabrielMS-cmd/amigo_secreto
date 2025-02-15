@@ -101,7 +101,7 @@ function exibirConflitos(tag,texto){
     
 }
 
-// acionarbotao enter
+// acionar botao enter
 document.addEventListener("keypress", function(e) {
     if(e.key === "Enter") {
     
