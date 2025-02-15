@@ -8,7 +8,7 @@
     --color-white: #FFFFFF;
 }
 
-/* Estilos gerais */
+
 * {
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ body {
     width: 100%;
 }
 
-/* Banner */
+
 .header-banner {
     flex: 40%;
     display: flex;
@@ -39,7 +39,7 @@ body {
     padding: 40px 0 0;
 }
 
-/* Seção de entrada */
+
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
@@ -52,7 +52,7 @@ body {
     width: 100%;
 }
 
-/* Títulos */
+
 .main-title {
     font-size: 48px;
     font-family: "Merriweather", serif;
@@ -70,7 +70,7 @@ body {
     text-align: center;
 }
 
-/* Contêineres de entrada e botão */
+
 .input-wrapper {
     display: flex;
     justify-content: center;
@@ -92,7 +92,7 @@ body {
     justify-content: center;
 }
 
-/* Estilos de entrada de texto */
+
 .input-title {
     flex: 1;
     padding: 10px 15px;
@@ -104,7 +104,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos de botão */
+
 button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
@@ -125,7 +125,7 @@ button {
     background-color: #049989;
 }
 
-/* Listas */
+
 ul {
     list-style-type: none;
     color: var(--color-white);
@@ -142,7 +142,7 @@ ul {
     text-align: center;
 }
 
-/* Botão de sortear título */
+
 .button-draw {
     display: flex;
     align-items: center;
@@ -163,15 +163,14 @@ ul {
 
 @media screen and (max-width: 768px) {
     .main-title {
-        font-size: 32px; /* Reduz o tamanho do título */
-    }
+        font-size: 32px; 
 
     .section-title {
         font-size: 28px;
     }
 
     .input-section {
-        border-radius: 32px 32px 0 0; /* Bordas menores para evitar excesso de espaço */
+        border-radius: 32px 32px 0 0; 
         padding: 15px;
     }
 
@@ -186,7 +185,7 @@ ul {
     }
 
     .button-draw {
-        flex-direction: column; /* Empilha ícone e texto */
+        flex-direction: column; 
         padding: 15px;
     }
 
@@ -232,13 +231,13 @@ ul {
         padding: 12px;
         margin: 0 auto;
         .button-draw {
-            /* ... outros estilos ... */
-            justify-content: center; /* Centraliza conteúdo do botão */
-            text-align: center; /* Fallback para texto */
+            
+            justify-content: center; 
+            text-align: center; 
         }
         
         .button-draw img {
-            margin: 0 0 8px 0; /* Espaço abaixo do ícone */
+            margin: 0 0 8px 0;
         }
 }
 

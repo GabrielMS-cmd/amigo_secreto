@@ -51,7 +51,6 @@ function sortearAmigos() {
     if (listaDeAmigos.length === 0) { 
         exibirConflitos("h2", "Não há amigos para serem sorteados");
         
-        
     }
  
     let indiceSorteado = Math.floor(Math.random() * listaDeAmigos.length);
